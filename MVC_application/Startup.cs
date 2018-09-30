@@ -14,21 +14,34 @@ namespace MVC_application
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        private readonly IConfigurationRoot configuration;
+        public Startup(IHostingEnvironment env)
+        {
+   
+            configuration = new ConfigurationBuilder()
+                    .AddEnvironmentVariables()
+                    .AddJsonFile(env.ContentRootPath + "/myconfig.json") // could use this as default one
+                    .AddJsonFile(env.ContentRootPath + "/otherconfig.development.json", true) // the second parameter mean this fild is optional if exit use it this one instead
+                    .Build();
+        }
+
+
+
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<FeatureToggle>(x=> new FeatureToggle{
+                ClassEnableDevelopment = configuration.GetValue<bool>("FeatureToggle:EnableDevelopment")
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, FeatureToggle feature)
         {
             app.UseExceptionHandler("/error.html");
-            var configuration = new ConfigurationBuilder()
-                                   .AddEnvironmentVariables()
-                                   .AddJsonFile(env.ContentRootPath + "/myconfig.json") // could use this as default one
-                                   .AddJsonFile(env.ContentRootPath + "/otherconfig.development.json", true) // the second parameter mean this fild is optional if exit use it this one instead
-                                   .Build();
 
-            if (configuration.GetValue<bool>("FeatureToggle:EnableDevelopment"))
+            //if (configuration.GetValue<bool>("FeatureToggle:EnableDevelopment")) // this if statment use .json file to configure application enviorment variable
+            if(feature.ClassEnableDevelopment)
             {
                 app.UseDeveloperExceptionPage();
             }
