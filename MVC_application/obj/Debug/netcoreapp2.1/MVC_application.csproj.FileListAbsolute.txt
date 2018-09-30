@@ -1,0 +1,14 @@
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\bin\Debug\netcoreapp2.1\MVC_application.deps.json
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\bin\Debug\netcoreapp2.1\MVC_application.runtimeconfig.json
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\bin\Debug\netcoreapp2.1\MVC_application.runtimeconfig.dev.json
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\bin\Debug\netcoreapp2.1\MVC_application.dll
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\bin\Debug\netcoreapp2.1\MVC_application.pdb
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.csprojAssemblyReference.cache
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.csproj.CoreCompileInputs.cache
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.RazorAssemblyInfo.cache
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.RazorAssemblyInfo.cs
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.AssemblyInfoInputs.cache
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.AssemblyInfo.cs
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.RazorTargetAssemblyInfo.cache
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.dll
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.pdb
