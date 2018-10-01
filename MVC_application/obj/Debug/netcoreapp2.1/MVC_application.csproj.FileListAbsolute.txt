@@ -12,3 +12,17 @@ F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\D
 F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.RazorTargetAssemblyInfo.cache
 F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.dll
 F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.pdb
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\bin\Debug\netcoreapp2.1\MVC_application.Views.dll
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\bin\Debug\netcoreapp2.1\MVC_application.Views.pdb
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.TagHelpers.input.cache
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.TagHelpers.output.cache
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.RazorCoreGenerate.cache
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\Home\index.g.cshtml.cs
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.RazorTargetAssemblyInfo.cs
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.Views.pdb
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\MVC_application.csproj.CopyComplete
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\blog\index.g.cshtml.cs
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\Blog\post.g.cshtml.cs
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Post.g.cshtml.cs
+F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\MonthlySpecials\Default.g.cshtml.cs

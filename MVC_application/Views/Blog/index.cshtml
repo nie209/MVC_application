@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVC_application.Models.Post_Model>
+@{
+    Layout = "_Layout";
+}
+
+<h1>Explorer's blog</h1>
+<p>shit in here</p>
+<div class="blog-posts">
+    @foreach (var post in Model)
+    {
+        @Html.Partial("_Post", post)
+    }
+</div>

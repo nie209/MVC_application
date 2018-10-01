@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MVC_application.Models;
 
 namespace MVC_application
 {
@@ -30,9 +31,12 @@ namespace MVC_application
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<FeatureToggle>(x=> new FeatureToggle{
-                ClassEnableDevelopment = configuration.GetValue<bool>("FeatureToggle:EnableDevelopment")
+                EnableDevelopment = configuration.GetValue<bool>("FeatureToggle:EnableDevelopment")
 
             });
+            services.AddTransient<FormattingServices>();
+            services.AddTransient<SpecialsDataContext>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,10 +45,11 @@ namespace MVC_application
             app.UseExceptionHandler("/error.html");
 
             //if (configuration.GetValue<bool>("FeatureToggle:EnableDevelopment")) // this if statment use .json file to configure application enviorment variable
-            if(feature.ClassEnableDevelopment)
+            if(feature.EnableDevelopment)
             {
                 app.UseDeveloperExceptionPage();
             }
+            
 
             //app.Run(async (context) =>
             //{
@@ -57,6 +62,9 @@ namespace MVC_application
                     throw new Exception("Error!");
                 }
                 await next();
+            });
+            app.UseMvc(routes=> {
+                routes.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
             });
             app.UseFileServer();
         }

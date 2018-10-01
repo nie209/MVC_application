@@ -7,6 +7,6 @@ namespace MVC_application
 {
     public class FeatureToggle
     {
-        public bool ClassEnableDevelopment { get; set; }
+        public bool EnableDevelopment { get; set; }
     }
 }
