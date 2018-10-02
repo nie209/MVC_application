@@ -26,4 +26,3 @@ F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\D
 F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\Blog\post.g.cshtml.cs
 F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Post.g.cshtml.cs
 F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\MonthlySpecials\Default.g.cshtml.cs
-F:\University\ASP.Net_core\MVC_application\MVC_application\MVC_application\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_OptionalLayout.g.cshtml.cs
