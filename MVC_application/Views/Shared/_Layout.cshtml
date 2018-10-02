@@ -70,11 +70,18 @@
   <section id="mainContent">
     @RenderBody()
   </section>
-    <aside id="secondaryContent">
-        <div id="specials" class="callOut">
-            @await  (Component.InvokeAsync<MVC_application.ViewComponents.MonthlySpecialsViewComponent>())
-        </div>
-    </aside>
+  <aside id="secondaryContent">
+      @if (IsSectionDefined("SecondaryContent"))
+      {
+          @RenderSection("SecondaryContent", false)
+      }
+      else
+      {
+          <div id="specials" class="callOut">
+              @await (Component.InvokeAsync<MVC_application.ViewComponents.MonthlySpecialsViewComponent>())
+          </div>
+      }
+  </aside>
   </div>
   <footer id="pageFooter">
   <section id="quickLinks">
