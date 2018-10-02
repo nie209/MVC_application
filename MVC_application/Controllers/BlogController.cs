@@ -55,7 +55,12 @@ namespace MVC_application.Controllers
             return View(post);
 
         }
-         
+        
+        [Route("Create")]
+        public IActionResult Create()
+        {
+            return View();
+        }
     
        
     }
