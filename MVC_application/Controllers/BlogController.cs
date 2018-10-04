@@ -21,42 +21,14 @@ namespace MVC_application.Controllers
         [Route("")]
         public IActionResult Index()
         {
-            var posts = new[]
-            {
-                new Post_Model
-                {
-                    Title = "my first blog post",
-                    Posted = DateTime.Now,
-                    Author = "some guy",
-                    Body = "this is some guy's post about shit"
-                },
-                new Post_Model
-                {
-                    Title = "my second blog post",
-                    Posted = DateTime.Now,
-                    Author = "some guy",
-                    Body = "this is some guy's post about shit"
-                },
-                new Post_Model
-                {
-                    Title = "my thrid blog post",
-                    Posted = DateTime.Now,
-                    Author = "some guy",
-                    Body = "this is some guy's post about shit"
-                }
-            };
+            var posts = _db.Posts.OrderByDescending(x => x.Posted).Take(5).ToArray(); // taking infomation out of the local database
             return View(posts);
         }
 
         [Route("{year:min(2000)}/{month:range(1,12)}/{key}")]
         public IActionResult Post(int year, int month, string key)
         {
-            var post = new Post_Model {
-                Title = "my blog post",
-                Posted = DateTime.Now,
-                Author = "some guy",
-                Body = "this is some guy's post about shit"
-            };
+            var post = _db.Posts.FirstOrDefault(x => x.Key == key);
             return View(post);
 
         }
@@ -78,7 +50,12 @@ namespace MVC_application.Controllers
             post.Posted = DateTime.Now;
             _db.Add(post);
             _db.SaveChanges();
-            return View();
+            return RedirectToAction("Post", "Blog", new
+            {
+                year = post.Posted.Year,
+                month = post.Posted.Month,
+                key = post.Key
+            });
         }
 
     }
