@@ -1,7 +1,9 @@
 {
+  "ConnectionStrings": {
+    "BlogdbContext": "Server=(localdb)\\mssqllocaldb;Database=ExploreCalifornia;Trusted_Connection=True;"
+  },
   "FeatureToggle": {
     "EnableDevelopment": true,
-    "EnableDevelopment2":  false 
+    "EnableDevelopment2": false
   }
-  
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MVC_application.Models;
@@ -36,7 +37,14 @@ namespace MVC_application
             });
             services.AddTransient<FormattingServices>();
             services.AddTransient<SpecialsDataContext>();
+            services.AddDbContext<BlogdbContext>(options =>
+            {
+                var connectionString = configuration.GetConnectionString("BlogdbContext");
+                options.UseSqlServer(connectionString);
+
+            });
             services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

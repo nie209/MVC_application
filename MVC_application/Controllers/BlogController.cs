@@ -12,6 +12,11 @@ namespace MVC_application.Controllers
     [Route("blog")]
     public class BlogController : Controller
     {
+        private readonly BlogdbContext _db;
+        public BlogController(BlogdbContext db)
+        {
+            _db = db;
+        }
         // GET: /<controller>/
         [Route("")]
         public IActionResult Index()
@@ -61,7 +66,20 @@ namespace MVC_application.Controllers
         {
             return View();
         }
-    
-       
+        [HttpPost, Route("Create")] 
+        public IActionResult Create(Post_Model post)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            post.Author = User.Identity.Name;
+            post.Posted = DateTime.Now;
+            _db.Add(post);
+            _db.SaveChanges();
+            return View();
+        }
+
     }
 }
