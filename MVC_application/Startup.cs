@@ -36,10 +36,15 @@ namespace MVC_application
 
             });
             services.AddTransient<FormattingServices>();
-            services.AddTransient<SpecialsDataContext>();
             services.AddDbContext<BlogdbContext>(options =>
             {
                 var connectionString = configuration.GetConnectionString("BlogdbContext");
+                options.UseSqlServer(connectionString);
+
+            });
+            services.AddDbContext<SpecialsDataContext>(options =>
+            {
+                var connectionString = configuration.GetConnectionString("SpecialsDataContext");
                 options.UseSqlServer(connectionString);
 
             });
